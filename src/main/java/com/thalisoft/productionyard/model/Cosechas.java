@@ -6,6 +6,7 @@ import lombok.Data;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.TimeZone;
 import java.util.UUID;
 
 @Data
@@ -21,10 +22,10 @@ public class Cosechas {
     private Long numeroCosecha;
 
     @Column
-    private LocalDate fechaInicio;
+    private TimeZone fechaInicio;
 
     @Column
-    private LocalDate fechaFin;
+    private TimeZone fechaFin;
 
     @ManyToOne
     @JoinColumn(name = "tipo_cosecha_id")

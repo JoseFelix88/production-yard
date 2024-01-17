@@ -1,13 +1,8 @@
 package com.thalisoft.productionyard.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Column;
-import lombok.Data;
+import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -21,4 +16,16 @@ public class Insumos {
     @Column(name = "id", updatable = false, nullable = false, columnDefinition = "BINARY(16)")
     private UUID id;
 
+    @ManyToOne
+    private Productos producto;
+
+    private String proveedor;
+
+    private Integer cantidadSolicitada;
+
+    private Long precioUnidad;
+
+    private Long totalPagado;
+
+    private String unidadMedida;
 }

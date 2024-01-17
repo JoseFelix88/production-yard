@@ -18,11 +18,10 @@ public class Productos {
 
     private Long precioUnitario;
 
-    private String unidadMedida;
-
     private Integer cantidadDisponible;
 
     private boolean esPerecedero;
 
-    private String proveedor;
+    @ManyToOne
+    private Categorias categoria;
 }

@@ -21,7 +21,6 @@ public class CobrosCosechas {
     private Clientes cliente;
 
     @ManyToOne
-    @JoinColumn(name = "cosecha_id")
     private Cosechas cosecha;
 
     private ZonedDateTime fechaHoraRegistro;

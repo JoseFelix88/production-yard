@@ -27,7 +27,7 @@ public class CobrosCosechas {
 
     private Double cantidadPeso;
 
-    private Integer cantidadSolicitada;
+    private Integer cantidadUnidSolicitada;
 
     private BigDecimal precioUnitario;
 

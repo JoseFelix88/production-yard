@@ -11,6 +11,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "insumos")
 public class Insumos {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", updatable = false, nullable = false, columnDefinition = "BINARY(16)")
@@ -28,4 +29,8 @@ public class Insumos {
     private Long totalPagado;
 
     private String unidadMedida;
+
+    @ManyToOne
+    @JoinColumn(name = "cosecha_id")
+    private Cosechas cosecha;
 }

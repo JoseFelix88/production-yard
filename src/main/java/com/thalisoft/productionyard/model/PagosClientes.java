@@ -19,11 +19,9 @@ public class PagosClientes {
     private ZonedDateTime fechaHoraRegistro;
 
     @ManyToOne
-    @JoinColumn(name = "cliente_id")
     private Clientes cliente;
 
     @ManyToOne
-    @JoinColumn(name = "cobro_cosecha_id")
     private CobrosCosechas cobroCosecha;
 
     private BigDecimal valorPagado;

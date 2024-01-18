@@ -21,14 +21,13 @@ public class CobrosCosechas {
     private Clientes cliente;
 
     @ManyToOne
-    @JoinColumn(name = "cosecha_id")
     private Cosechas cosecha;
 
     private ZonedDateTime fechaHoraRegistro;
 
     private Double cantidadPeso;
 
-    private Integer cantidadSolicitada;
+    private Integer cantidadUnidSolicitada;
 
     private BigDecimal precioUnitario;
 

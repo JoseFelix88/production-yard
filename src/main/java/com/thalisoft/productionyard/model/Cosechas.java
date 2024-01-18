@@ -18,13 +18,10 @@ public class Cosechas {
     @Column(name = "id", updatable = false, nullable = false, columnDefinition = "BINARY(16)")
     private UUID id;
 
-    @Column
     private Long numeroCosecha;
 
-    @Column
     private TimeZone fechaInicio;
 
-    @Column
     private TimeZone fechaFin;
 
     @ManyToOne
@@ -34,4 +31,8 @@ public class Cosechas {
     private Integer cantidadInicio;
 
     private Integer cantidadFinal;
+
+    @OneToMany(mappedBy = "cosecha", cascade = CascadeType.ALL)
+    @OrderColumn(name = "orden_insumo")  // Aquí se especifica el nombre de la columna de orden
+    private List<Insumos> insumos;
 }

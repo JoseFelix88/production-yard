@@ -14,6 +14,5 @@ public class Categorias {
     @Column(name = "id", updatable = false, nullable = false, columnDefinition = "BINARY(16)")
     private UUID id;
 
-
     private String descripcion;
 }

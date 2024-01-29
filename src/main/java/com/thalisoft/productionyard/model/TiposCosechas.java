@@ -14,6 +14,7 @@ public class TiposCosechas {
     @Column(name = "id", updatable = false, nullable = false, columnDefinition = "BINARY(16)")
     private UUID id;
 
-    @Column
     private String descripcion;
+
+    private ModalidadVenta modalidadVenta;
 }
